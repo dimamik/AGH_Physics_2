@@ -110,18 +110,20 @@
 
     \subsection{Błędy grube}
     \textbf{Zadanie:} Oceń, czy wyniki pomiaru okresu nie zawierają błędów grubych. (Zwrócić uwagę na największą 
-    i najmniejszą wartość Ti w uzyskanym zestawie danych)\newline
-    Przy analizie wyników nie zauważyliśmy błędów grubych. Różnica między największą a najmniejszą wartością wynosi \[\Delta t = t_{max} - t_{min} = 0,07s \]
+    i najmniejszą wartość \(T_i\) w uzyskanym zestawie danych):\newline
+    Przy analizie wyników nie zauważyliśmy błędów grubych. Różnica między największą a najmniejszą wartością wynosi: \[\Delta t = t_{max} - t_{min} = 0,07s \]
     
     \subsection{Niepewność pomiaru okresu (typu A)}
-    \textbf{Zadanie:} Oblicz niepewność pomiaru okresu (typu A). \newline
-    \[u(T) =\sqrt{\frac{\sum{(T_i - \overline T)^2}}{n(n-1)}} = 0,0063s \approx 0,007s \] gdzie:  \(\overline T\) - średni okres, \(T_i\) - okres zmierzony za i-tym razem, n - liczba pomiarów
+    \textbf{Zadanie:} Oblicz niepewność pomiaru okresu (typu A): \newline
+    \[u(T) =\sqrt{\frac{\sum{(T_i - \overline T)^2}}{n(n-1)}} = 0,0063s \approx 0,007s \] gdzie:  \(\overline T\) - średni okres, \(T_i\) - okres zmierzony za i-tym razem, \(n\) - liczba pomiarów
     
     \subsection{Niepewność pomiaru długości wahadła (typu B)}
-    \textbf{Zadanie:} Oceń niepewność pomiaru długości wahadła (typu B).\newline Podziałka linijki, za pomocą której było mierzone wahadło wynosi \(1mm\), jednak oszacowanie środka ciężkości stanowiło problem, dlatego oszacowaliśmy niepewność typu B jako \(3mm\)
+    \textbf{Zadanie:} Oceń niepewność pomiaru długości wahadła (typu B):\newline 
+    Podziałka linijki, za pomocą której było mierzone wahadło wynosi \(1mm\), jednak oszacowanie środka ciężkości stanowiło problem, w związku z trudnością wyznaczania środka masy, dlatego oszacowaliśmy niepewność typu B jako \(3mm\)
     
     \subsection{Przyspieszenie ziemskie  na podstawie uzyskanych wartości \(l\) i \(T\)}
-    Korzystając ze wzoru na okres drgań wachadła matematycznego dla małych kątów odchylenia, mamy: \[T = 2\pi \sqrt{\frac{l}{g}} \Rightarrow g = \frac{4\pi^2}{T^2}l = \frac{4 \times 3.141^2}{(1.343s)^2} * 0,45m  \approx 9,846 m/s^2\]
+    \textbf{Zadanie:} Na podstawie uzyskanych wartości l i T oblicz przyspieszenie ziemskie:\newline
+    Korzystając ze wzoru na okres drgań wachadła matematycznego dla małych kątów odchylenia, mamy: \[T = 2\pi \sqrt{\frac{l}{g}} \Rightarrow g = \frac{4\pi^2}{T^2}l = \frac{4 \times 3,141^2}{(1,343s)^2} * 0,45m  \approx 9,846 m/s^2\]
     
     \subsection{Niepewność złożoną \(u_c(g)\) przy pomocy prawa przenoszenia niepewności}
     \textbf{Zadanie:} Oblicz niepewność złożoną \(u_c(g)\) przy pomocy prawa przenoszenia niepewności. \newline
@@ -129,18 +131,24 @@
     \[u_c(g) = \sqrt{(\frac{\partial g}{\partial l} u(l))^2 + (\frac{\partial g}{\partial T} u(T))^2} = 
     	\sqrt{(21,87\times0,003)^2 + (14,65\times0,007)^2}
 	 \approx 0,121 m/s^2\]
-	Niepewności względne:
+	Niepewność względna:
 	\[\frac{u_c(g)}{g} * 100\% = 1,2\% \]
-	
+	Inny sposób wyliczenia, za pomocą współczynnika wrażliwości \(p_k\):
+	\[\frac{u_c(g)}{g} = \sqrt{\sum_k ({p_k \frac{u(x_k)}{x_k})}^2}\]
+	Gdzie: \[p_k = \frac{x_k}{y} \frac{\partial y}{\partial x_k} , p_l = 1 , p_T = -2\] 
+	Czyli w końcu mamy:
+	\[ \frac{u_c(g)}{g} = \sqrt{(1\times \frac{0,003}{0,45})^2 +(-2\times \frac{0,007}{1,343})^2 } \approx 1,2 \%\]
 	\subsection{Niepewność rozszerzoną \(U(g)\)) przy pomocy prawa przenoszenia niepewności}
 	\textbf{Zadanie:} Oblicz niepewność rozszerzoną U(g).\newline
 	Niepewność rozszerzoną obliczamy za pomocą wzoru:
 	\[U(g) = k \times u(g) = 0,242 m/s^2\]
-	Gdzie:  \( k = 2\) - współczynnik rozszerzenia
+	Gdzie:  \( k = 2\) - współczynnik rozszerzenia.
 	Czyli mamy: \(g = 9,846 \pm  0,242 m/s^2\)
 	
 	\subsection{Porównanie uzyskanej wartości przyspieszenia ziemskiego z wartością tabelaryczną}
-	\[\Delta g = 9,846 m/s^2 - 9,8105 m/s^2 = 0,0355 m/s^2 < 0,242 m/s^2\] Czyli g mieści się w zakresie niepewności rozszerzonej, bo \( g_{rzecz}\in g_{uzysk} \pm 0,242  \).
+	\textbf{Zadanie:} Czy uzyskana wartość przyspieszenia ziemskiego jest zgodna, w granicach niepewności rozszerzonej, z wartością tabelaryczną? Dla Krakowa \(g = 9,811 m/s2\). \newline
+	\[\Delta g = 9,846 m/s^2 - 9,8105 m/s^2 = 0,0355 m/s^2 < 0,242 m/s^2\] Czyli g mieści się w zakresie niepewności rozszerzonej:
+	\[g_{otrz} \in (g-0,242m/s^2 , g+0,242m/s^2)\] Gdzie \(g=9,8105m/s^2\) - wartość przyspieszenia Ziemskiego w Krakowie.
 	
 	\subsection{Wykres zależności okresu od długości wahadła \(T(l)\)}
     %Tu TEKST
@@ -156,6 +164,12 @@
 	\subsection{Obliczanie niepewności u(g) z niepewności u(a) }
 	% Tu TEKST
 	\section{Wnioski}
-
+	\begin{itemize}
+	
+    \item Biorąc pod uwagę, że przyjęliśmy dużą wartość błędu i brak dobrze skonfigurowanego wahadła, doświadczenie zostało wykonane poprawnie. To można podtwierdzić małą różnicą między wartością tabularną g a tą, którą otrzymaliśmy, która "mieści się" w niepewności rozszerzonej.
+    \item Także eksperymentowow było podtwierdzone, że gdy maleje długość wahadła, również maleje okres T. 
+    \item Liczyć niepewność względną jest wygodniej, korzystając z za pomocą współczynnika wrażliwości \(p_i\), co zmniejsza szansę na popełnienie błędów rachunkowych.
+    \item Liczenie niepewności pozwala na oszacowanie rozrzutu wyników, co pomaga w dalniejszej analizie.
+    \end{itemize}
 
 \end{document}
