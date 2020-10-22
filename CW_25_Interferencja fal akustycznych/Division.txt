@@ -1,0 +1,8 @@
+Dima:
+    Tablicy
+    Opracowanie wynikow:
+        4.1
+        4.2
+        4.3
+Wojciech:
+    Pozostale + Poczatek
